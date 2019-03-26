@@ -1,0 +1,7 @@
+:local(.container) {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 2em 0;
+    position: relative;
+    padding-bottom: 5em;
+}

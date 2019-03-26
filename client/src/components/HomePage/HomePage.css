@@ -1,0 +1,21 @@
+:local(.title) {
+    font-weight: bold;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+:local(.subtitle){
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+:local(.imageContainer) {
+    height: 30em;
+    text-align: center;
+}
+
+:local(.image) {
+    max-height: 100%;
+    max-width: 100%;
+}

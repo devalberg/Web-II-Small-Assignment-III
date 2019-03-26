@@ -1,0 +1,11 @@
+:local(.formContainer) {
+    margin: 2em 0;
+}
+
+:local(.formTogglerButton) {
+    text-align: center;
+}
+
+:local(.formSubmissionButton) {
+    text-align: right;
+}

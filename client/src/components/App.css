@@ -1,0 +1,24 @@
+:global(.bold) {
+    font-weight: bold;
+}
+
+:global(.center-text) {
+    text-align: center;
+}
+
+:global(html, body) {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+:global(footer) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 3em;
+    line-height: 3em;
+}

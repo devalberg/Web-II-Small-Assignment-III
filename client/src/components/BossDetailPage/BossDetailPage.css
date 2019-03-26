@@ -1,0 +1,22 @@
+:local(.bossDetails) {
+    text-align: center;
+}
+
+:local(.bossName) {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+:local(.bossAvatarContainer) {
+    height: 30em;
+    margin: 1em;
+}
+
+:local(.bossAvatar) {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+:local(.bossDescription) {
+    font-size: 1.5em;
+}

@@ -1,0 +1,35 @@
+:local(.card) {
+    background-color: rgb(241, 241, 241);
+    padding: 1em;
+    border-radius: 1em;
+    border: 1px solid rgb(195, 195, 195);
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    text-align: center;
+}
+
+:local(.button) {
+    background-color: #386FA4;
+    padding: 1em;
+    border-radius: 1em;
+    color: white;
+    text-align: center;
+}
+
+:local(.button:hover) {
+    text-decoration: none;
+    color: white;
+    background-color: #133C55;
+}
+
+:local(.bossAvatarContainer) {
+    height: 20em;
+    text-align: center;
+}
+
+:local(.bossAvatar) {
+    max-width: 100%;
+    max-height: 100%;
+}

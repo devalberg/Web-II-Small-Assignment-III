@@ -1,0 +1,27 @@
+:local(.button) {
+    padding: 1em;
+    display: inline-block;
+    color: white;
+    border-radius: 1em;
+}
+
+:local(.button:focus) {
+    outline: none;
+}
+
+
+:local(.green) {
+    background-color: #08A045;
+}
+
+:local(.green:hover) {
+    background-color: #0B6E4F;
+}
+
+:local(.red) {
+    background-color: #912F40;
+}
+
+:local(.red:hover) {
+    background-color: #702632;
+}

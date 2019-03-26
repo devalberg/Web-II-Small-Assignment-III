@@ -1,0 +1,29 @@
+:local(.formGroup) {
+    margin: 1em 0;
+}
+
+:local(.formGroup label) {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+:local(.formLabelError) {
+    color: red;
+}
+
+:local(.formInput) {
+    border: 1px solid rgb(195, 195, 195);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    min-width: 100%;
+    width: 100%;
+}
+
+:local(.formInputError) {
+    border-color: red;
+}
+
+:local(.errorMessage) {
+    color: red;
+    font-size: 0.8em;   
+}
