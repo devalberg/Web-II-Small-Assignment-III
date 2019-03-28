@@ -38,18 +38,22 @@ class BossDetailPage extends Component {
         console.log(this.state);
 
         return (
-            <div className={styles.bossDetails}>
-                {this.state.redirect ? <Redirect to="/bosses" /> : null}
-                <h1 className={styles.bossName}>{name}</h1>
-                <div className={styles.bossAvatarContainer}>
-                    <img src={img} alt={name} className={styles.bossAvatar} />
+
+            <div>
+                <div className={styles.bossDetails}>
+                    {this.state.redirect ? <Redirect to="/bosses" /> : null}
+                    <h1 className={styles.bossName}>{name}</h1>
+                    <div className={styles.bossAvatarContainer}>
+                        <img src={img} alt={name} className={styles.bossAvatar} />
+                    </div>
+                    <p className={styles.bossDescription}>{description}</p>
+
                 </div>
-                <p className={styles.bossDescription}>{description}</p>
-
                 <EditBossDetailForm />
-
-                <Button color="red" onClick={this.deleteBossHandler}>Delete {name}!</Button>
-            </div>
+                <div className={styles.bossDetails}>
+                    <Button color="red" onClick={this.deleteBossHandler}>Delete {name}!</Button>
+                </div >
+            </div >
         )
     }
 }

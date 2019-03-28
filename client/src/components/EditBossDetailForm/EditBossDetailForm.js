@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import validator from 'validator';
+import isImageUrl from 'is-image-url';
 
 import { updateBossDetailsFromServer } from '../../actions/patchActions';
 
@@ -54,7 +55,9 @@ class EditBossDetailForm extends Component {
         if (validator.isEmpty(img)) {
             errors.img = 'Image URL must not be empty!';
         } else if (!validator.isURL(img)) {
-            errors.img = 'Image must be an URL!';
+            errors.img = 'You must enter an URL!';
+        } else if (!isImageUrl(img)) {
+            errors.img = 'Invalid Image URL!'
         }
 
         if (Object.keys(errors).length === 0) {
@@ -69,10 +72,12 @@ class EditBossDetailForm extends Component {
         e.preventDefault();
 
         if (this.formIsValid()) {
-            const newBossObj = this.state.fields;
-            this.props.updateBossDetailsFromServer(this.props.bossDetails.id, newBossObj);
-            this.setState({ showForm: false });
-            alert("Details updated!");
+            if (window.confirm("Are you sure you would like to edit this boss? This cannot be undone!")) {
+                const newBossObj = this.state.fields;
+                this.props.updateBossDetailsFromServer(this.props.bossDetails.id, newBossObj);
+                this.setState({ showForm: false });
+                alert("Details updated!");
+            }
         }
     }
 

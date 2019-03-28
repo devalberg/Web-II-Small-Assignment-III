@@ -11,6 +11,7 @@ import Navbar from './Navbar/Navbar'
 import HomePage from './HomePage/HomePage';
 import BossListPage from './BossListPage/BossListPage';
 import BossDetailPage from './BossDetailPage/BossDetailPage';
+import PageNotFound from './PageNotFound/PageNotFound';
 
 import './App.css';
 
@@ -30,6 +31,7 @@ class App extends Component {
                             <Route exact path="/" component={HomePage} />
                             <Route exact path="/bosses" component={BossListPage} />
                             <Route exact path="/bosses/:id" component={BossDetailPage} />
+                            <Route exact path="*" component={PageNotFound} />
                         </Switch>
                     </ContentContainer>
                     <footer>

@@ -1,0 +1,8 @@
+:local(.PageNotFound) {
+    text-align: center;
+}
+
+:local(.PageNotFound h1) {
+    font-weight: bold;
+    margin-bottom: 2em;
+}
