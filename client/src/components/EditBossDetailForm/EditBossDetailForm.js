@@ -12,7 +12,6 @@ import Button from '../Button/Button';
 
 const initialState = {
     showForm: false,
-    id: null,
     fields: {
         name: '',
         description: '',
@@ -33,18 +32,11 @@ class EditBossDetailForm extends Component {
         this.submitHandler = this.submitHandler.bind(this);
     }
 
-    static getDerivedStateFromProps(props, state) {
-        if (props.bossDetails.id !== state.id) {
-            return {
-                id: props.bossDetails.id,
-                fields: {
-                    name: props.bossDetails.name,
-                    description: props.bossDetails.description,
-                    img: props.bossDetails.img
-                }
-            }
-        }
-        return null;
+    componentWillReceiveProps(props) {
+        this.setState({
+            ...this.state,
+            fields: { ...props.bossDetails }
+        });
     }
 
     formIsValid() {

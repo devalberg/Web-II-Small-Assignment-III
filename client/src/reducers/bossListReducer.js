@@ -1,4 +1,4 @@
-import { GET_BOSS_LIST, CREATE_NEW_BOSS, DELETE_BOSS } from '../actions/types';
+import { GET_BOSS_LIST, CREATE_NEW_BOSS, DELETE_BOSS, UPDATE_BOSS } from '../actions/types';
 
 export default function (state = [], action) {
     const { payload } = action;
@@ -9,8 +9,15 @@ export default function (state = [], action) {
             return [...state, { id: payload.id, ...payload.detailsObj }];
         case DELETE_BOSS:
             return state.filter((obj) => {
-                    return obj.id !== payload.id
-                })
+                return obj.id !== payload.id
+            });
+        case UPDATE_BOSS:
+            return state.map(obj => {
+                if (obj.id === payload.id) {
+                    return { id: payload.id, ...payload.newDetailsObj };
+                }
+                return obj;
+            })
         default:
             return state;
     }

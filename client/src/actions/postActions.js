@@ -12,7 +12,7 @@ const createNewBossFromServerSuccess = (id, detailsObj) => ({
 });
 
 const createNewBossFromServerFail = (responseStatus) => (
-    alert(`Error occured! Server responded with a status of ${responseStatus}`)
+    alert(`Error occurred! Server responded with a status of ${responseStatus}`)
 );
 
 const createNewBossFromServerThunk = (detailsObj) => (dispatch) => {
@@ -49,6 +49,6 @@ const deleteBossFromServerSuccess = (id) => ({
 })
 
 const deleteBossFromServerFail = (responseStatus) => (
-    alert(`Error occured! Server responded with a status of ${responseStatus}`)
+    alert(`Error occurred! Server responded with a status of ${responseStatus}`)
 );
 

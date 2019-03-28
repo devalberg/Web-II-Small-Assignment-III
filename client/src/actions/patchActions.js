@@ -12,7 +12,7 @@ export const updateBossDetailsFromServerSuccess = (id, newDetailsObj) => ({
 });
 
 export const updateBossDetailsFromServerFail = (responseStatus) => (
-    alert(`Error occured! Server responded with a status of ${responseStatus}`)
+    alert(`Error occurred! Server responded with a status of ${responseStatus}`)
 )
 
 const updateBossDetailsFromServerThunk = (id, newDetailsObj) => (dispatch) => {

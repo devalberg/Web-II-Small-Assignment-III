@@ -6,7 +6,7 @@ const HomePage = props => {
         <>
             <h1 className={styles.title}>Megaman Bosses</h1>
             <div className={styles.imageContainer}>
-                <img className={styles.image} src="https://vignette.wikia.nocookie.net/megaman/images/d/d2/MMGroupIllustration1.png/revision/latest?cb=20120708080351" alt="bossesCollection" />
+                <img className={styles.image} src="https://vignette.wikia.nocookie.net/megaman/images/d/d2/MMGroupIllustration1.png/revision/latest/scale-to-width-down/1000?cb=20120708080351" alt="bossesCollection" />
             </div>
 
             <p className={styles.subtitle}>
